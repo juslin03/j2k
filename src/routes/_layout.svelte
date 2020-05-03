@@ -7,8 +7,8 @@
   let visible = true;
   let isClick = false;
 
-  function home(req, res) {
-    location.replace(req.explicitOriginalTarget.baseURI);
+  function home(e) {
+    location.replace(e.explicitOriginalTarget.baseURI);
   }
 
   function contextDisable(e) {

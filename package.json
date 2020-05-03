@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "MisterJ",
+  "description": "Une application présentant mon portfolio",
+  "version": "1.0.0",
   "scripts": {
     "start": "sapper dev",
     "dev": "sapper dev --port $PORT",

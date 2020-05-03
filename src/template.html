@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang='fr-FR'>
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width,initial-scale=1.0'>
@@ -10,6 +10,27 @@
 	<link rel='stylesheet' href='global.css'>
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='favicon.png'>
+	<script language="JavaScript">
+		
+		document.onkeypress = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123) {
+				return false;
+			}
+		}
+		document.onmousedown = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123) {
+				return false;
+			}
+		}
+	document.onkeydown = function (event) {
+			event = (event || window.event);
+			if (event.keyCode == 123 || event.keyCode == 85 || event.keyCode == 67) {
+				return false;
+			}
+		}
+	</script>
 
 	<!-- Sapper generates a <style> tag containing critical CSS
 	     for the current page. CSS for the rest of the app is

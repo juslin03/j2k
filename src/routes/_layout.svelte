@@ -1,22 +1,37 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+  import Nav from "../components/Nav.svelte";
 
-	export let segment;
+  import { quintOut } from "svelte/easing";
+  import { fade, draw, fly } from "svelte/transition";
+  import { expand } from "../custom-transitions.js";
+  import { inner, outer } from "../shape.js";
+
+  let visible = true;
+  let isClick = false;
+
+  function home(req, res) {
+    location.replace(req.explicitOriginalTarget.baseURI);
+  }
+
+  function contextDisable(e) {
+    e.preventDefault();
+  }
 </script>
 
 <style>
-	main {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+  img {
+    cursor: pointer;
+  }
 </style>
 
-<Nav {segment}/>
-
-<main>
-	<slot></slot>
+<header
+  on:contextmenu={contextDisable}
+  class="section section--header"
+  id="logo">
+  <img on:click={home} class="profil" src="juslin.jpeg" alt="" />
+</header>
+<main
+  on:contextmenu={contextDisable}
+  class="section section--main">
+  <slot />
 </main>

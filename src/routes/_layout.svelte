@@ -26,7 +26,7 @@
   on:contextmenu={contextDisable}
   class="section section--header"
   id="logo">
-  <img on:click={home} class="profil" src="juslin.jpeg" alt="" />
+  <img on:click={home} class="profil" src="juslin-profil.png" alt="" />
 </header>
 <main
   on:contextmenu={contextDisable}

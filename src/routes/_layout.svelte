@@ -3,8 +3,6 @@
 
   import { quintOut } from "svelte/easing";
   import { fade, draw, fly } from "svelte/transition";
-  import { expand } from "../custom-transitions.js";
-  import { inner, outer } from "../shape.js";
 
   let visible = true;
   let isClick = false;

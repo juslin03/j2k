@@ -2,6 +2,8 @@
   import { datas } from '../data';
   let blacket_o = `{`;
   let blacket_c = `}`;
+
+ 
 </script>
 
 <style>

@@ -19,6 +19,20 @@
   }
 </script>
 
+<header
+  on:contextmenu={contextDisable}
+  class="section section--header"
+  id="logo"
+>
+  <p transition:fade={{ x: -200, duration: 2000 }} class="textwriter">
+    Je suis Juslin Komenan!
+  </p>
+  <img on:click={home} class="profil" src="juslin-profil.png" alt="" />
+</header>
+<main on:contextmenu={contextDisable} class="section section--main">
+  <slot />
+</main>
+
 <style>
   img {
     cursor: pointer;
@@ -34,16 +48,3 @@
     background-color: black;
   }
 </style>
-
-<header
-  on:contextmenu={contextDisable}
-  class="section section--header"
-  id="logo">
-  <p transition:fade={{ x: -200, duration: 2000 }} class="textwriter">
-    Je suis Juslin Komenan!
-  </p>
-  <img on:click={home} class="profil" src="juslin-profil.png" alt="" />
-</header>
-<main on:contextmenu={contextDisable} class="section section--main">
-  <slot />
-</main>
